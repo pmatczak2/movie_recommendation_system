@@ -95,3 +95,14 @@ print(recommendations[["title", "genres"]])
 # highly, and are also popular among all users who have rated the recommended movies highly. The resulting
 # recommendations are sorted by a score that gives higher weight to movies that are recommended by a larger
 # percentage of similar users.
+
+# line 44: This line of code is applying a function called clean_title to the title column of a Pandas DataFrame
+# called movies. The apply method in Pandas allows you to apply a function to each element of a column and returns a
+# new column with the same length as the original column.
+#
+# The clean_title function is most likely defined earlier in the code and is used to clean up the movie titles by
+# removing any unnecessary characters, converting all characters to lowercase, etc.
+#
+# By applying this function to the title column, a new column called clean_title is created in the movies DataFrame,
+# which contains the cleaned-up versions of the movie titles. This can be useful for data analysis and visualization
+# purposes, as it can make it easier to group, filter, or search for movies based on their titles.
