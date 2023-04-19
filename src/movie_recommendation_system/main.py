@@ -106,3 +106,39 @@ print(recommendations[["title", "genres"]])
 # By applying this function to the title column, a new column called clean_title is created in the movies DataFrame,
 # which contains the cleaned-up versions of the movie titles. This can be useful for data analysis and visualization
 # purposes, as it can make it easier to group, filter, or search for movies based on their titles.
+
+# line 47-48: In this code, a TfidfVectorizer object is created with an ngram range of 1 to 2. TfidfVectorizer is a
+# method from the scikit-learn library, which converts a collection of raw text documents to a matrix of TF-IDF
+# features.
+#
+# TF-IDF stands for term frequency-inverse document frequency. It is a technique used in text mining to reflect how
+# important a word is to a document in a collection of documents. The TF-IDF value increases proportionally to the
+# number of times a word appears in a document but is offset by the frequency of the word in the corpus. This helps
+# to adjust for the fact that some words are more common in general than others and thus may not be as informative.
+#
+# The ngram_range parameter specifies the range of n-grams to consider when extracting features from the text. In
+# this case, n-grams of size 1 and 2 are considered, which means that individual words as well as pairs of
+# consecutive words will be considered as features.
+#
+# The fit_transform method of the TfidfVectorizer object is then called on the "clean_title" column of the movies
+# DataFrame. This method fits the vectorizer to the text data and transforms it into a sparse matrix of TF-IDF
+# features. This means that each row of the resulting matrix represents a document (in this case, a movie title) and
+# each column represents a feature (in this case, a word or a pair of words). The value in each cell represents the
+# TF-IDF score of the corresponding feature in the corresponding document.
+#
+# The resulting sparse matrix can be used as input for various machine learning models, such as clustering or
+# classification algorithms, to analyze the text data and extract insights from it
+
+# line 51-54: This code is asking the user to enter a movie title using the input function and storing the input in a
+# variable called movie_title.
+#
+# Then, the get_movie_recommendations function is called with movie_title as its argument. This function presumably
+# takes the input movie title, finds similar movies based on some criteria, and returns a DataFrame of recommended
+# movies along with their titles and genres.
+#
+# Finally, the code prints the recommended movies along with their titles and genres using the print function. The
+# DataFrame is accessed using the recommendations variable and the "title" and "genres" columns are selected using
+# the double square bracket notation ([["title", "genres"]]).
+#
+# Overall, this code is a simple way to get movie recommendations based on user input, which can be useful for
+# creating movie recommendation systems or for personal movie watching suggestions.
